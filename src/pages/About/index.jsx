@@ -1,9 +1,9 @@
 import React from "react";
 import './style.css'
 
-import aboutPhoto from '../../assets/images/IMG_0477.jpg';
-import github from '../../assets/images/github.png';
-import linkedin from '../../assets/images/linkedin.png';
+import aboutPhoto from '/assets/IMG_0477.jpg';
+import github from '/assets/github.png';
+import linkedin from '/assets/linkedin.png';
 
 const About = () => {
   return (

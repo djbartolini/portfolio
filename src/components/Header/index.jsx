@@ -3,7 +3,7 @@ import React from "react";
 import Nav from '../Nav/index'
 import './style.css';
 
-import favicon from '../../assets/images/dev-favicon.svg';
+import favicon from '/assets/dev-favicon.svg';
 
 const Header = () => {
 

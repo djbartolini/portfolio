@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { validateEmail } from "../../utils/validateEmail";
 import './style.css'
 
-import github from '../../assets/images/github.png';
-import linkedin from '../../assets/images/linkedin.png';
+import github from '/assets/github.png';
+import linkedin from '/assets/linkedin.png';
 
 
 export default function Contact() {

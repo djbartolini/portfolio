@@ -7,15 +7,15 @@ import {
 } from "react-scroll-motion";
 import './style.css'
 
-import photo from '../../assets/images/dan-picture.jpg';
-import quizzical from '../../assets/images/quizzical-demo.gif';
-import weather from '../../assets/images/weather-dashboard.png';
-import sofaKing from '../../assets/images/sofa-king.png';
-import thumbnail1 from '../../assets/images/headshot-digitized.png';
-import thumbnail2 from '../../assets/images/IMG_8846.jpg';
-import thumbnail3 from '../../assets/images/IMG_8847.jpg';
-import github from '../../assets/images/github.png';
-import linkedin from '../../assets/images/linkedin.png';
+import photo from '/assets/dan-picture.jpg';
+import quizzical from '/assets/quizzical-demo.gif';
+import weather from '/assets/weather-dashboard.png';
+import sofaKing from '/assets/sofa-king.png';
+import thumbnail1 from '/assets/headshot-digitized.png';
+import thumbnail2 from '/assets/IMG_8846.jpg';
+import thumbnail3 from '/assets/IMG_8847.jpg';
+import github from '/assets/github.png';
+import linkedin from '/assets/linkedin.png';
 
 
 const Portfolio = () => {
