@@ -1,4 +1,10 @@
-.nav-text {
+#nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-item {
   color: #ffffff;
   padding: 0 2rem;
 }
@@ -6,4 +12,14 @@
 .nav-link-active {
   font-weight: bold;
   text-decoration: underline;
+  color: #ffc1f5;
+}
+
+@media screen and (max-width: 768px) {
+  #nav {
+    margin-right: 0;
+  }
+  .nav-item {
+    padding: 0 1rem;
+  }
 }

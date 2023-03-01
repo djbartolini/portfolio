@@ -9,18 +9,18 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="/"><img src={favicon} alt="logo" id="logo" /></a>
-          <div>
-            <h1>Daniel Bartolini</h1>
-            <p>Web Development</p>
-          </div>
-          <div className="navbar">
-            <Nav />
+        <div className="nav-parent">
+          <a href="/"><img src={favicon} alt="logo" className="logo" /></a>
+          <div className="nav-text">
+            <span className="style-nav-h1">
+              <h1>Daniel Bartolini &nbsp;</h1>
+              <p>Web Development</p>
+            </span>
+            <div className="nav-container">
+              <Nav />
+            </div>
           </div>
         </div>
-      </nav>
     </header>
   )
 }

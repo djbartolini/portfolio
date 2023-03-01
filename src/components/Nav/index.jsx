@@ -4,21 +4,21 @@ import './style.css';
 
 const Nav = () => {
   return (
-    <div className="navbar" id='nav'>
+    <div id='nav'>
       <article className='nav-item'>
-        <a href='/' className='nav-link-active nav-text'>
-          Portfolio
-        </a>
+        {document.location.pathname === '/' 
+          ? <a href='/' className='nav-link-active'>Portfolio</a> 
+          : <a href='/' className='nav-link'>Portfolio</a>}
       </article>
       <article className='nav-item'>
-        <a href='/about' className='nav-link nav-text'>
-          About
-        </a>
+        {document.location.pathname === '/about' 
+          ? <a href='/about' className='nav-link-active'>About Me</a> 
+          : <a href='/about' className='nav-link'>About Me</a>}
       </article>
       <article className='nav-item'>
-        <a href='/contact' className='nav-link nav-text'>
-          Contact Me
-        </a>
+        {document.location.pathname === '/contact' 
+          ? <a href='/contact' className='nav-link-active'>Contact</a> 
+          : <a href='/contact' className='nav-link'>Contact</a>}
       </article>
     </div>
   )
