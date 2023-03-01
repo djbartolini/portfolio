@@ -72,7 +72,7 @@ const Portfolio = () => {
           <Animator animation={batch(FadeIn(), StickyIn())}>
             <div className="style-project-div">
               <h3>Let's Get Quizzical</h3>
-              <a className="style-project-link" href="https://github.com/kassrojas/quizQL">GitHub</a>
+              <a className="style-project-link" href="https://github.com/djbartolini/quizQL">GitHub</a>
               <a className="style-project-link" href="https://young-fortress-52703.herokuapp.com/">Access the App</a>
             </div>
             <img src={quizzical} className="quizzical" />
@@ -88,7 +88,7 @@ const Portfolio = () => {
                 <div className="style-small-div">
                   <h4>Sofa Kings</h4>
                   <span>
-                    <a className="style-project-link" href="https://github.com/kassrojas/sofa-king-cool">GitHub</a>
+                    <a className="style-project-link" href="https://github.com/djbartolini/sofa-king-cool">GitHub</a>
                     <a className="style-project-link" href="http://quiet-river-37193.herokuapp.com/">App</a>
                   </span>
                 </div>
