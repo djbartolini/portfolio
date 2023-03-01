@@ -11,9 +11,6 @@ import photo from '/assets/dan-picture.jpg';
 import quizzical from '/assets/quizzical-demo.gif';
 import weather from '/assets/weather-dashboard.png';
 import sofaKing from '/assets/sofa-king.png';
-import thumbnail1 from '/assets/headshot-digitized.png';
-import thumbnail2 from '/assets/IMG_8846.jpg';
-import thumbnail3 from '/assets/IMG_8847.jpg';
 import github from '/assets/github.png';
 import linkedin from '/assets/linkedin.png';
 
