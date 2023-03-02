@@ -3,7 +3,7 @@
   "private": false,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "bartolini.dev",
+  "homepage": "/bartolini.dev/#",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
