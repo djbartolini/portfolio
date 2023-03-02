@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Header from './components/Header/index';
 import Portfolio from './pages/Portfolio/index';
@@ -12,16 +12,14 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Portfolio />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </>
-      </Router>
+      <HashRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Portfolio />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </HashRouter>
     </div>
   )
 }
