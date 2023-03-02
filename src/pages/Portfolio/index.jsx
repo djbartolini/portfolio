@@ -19,6 +19,10 @@ import linkedin from '/assets/linkedin.png';
 const Portfolio = () => {
   const ref = useRef();
 
+  const buttonRef = useRef();
+  const topRef = useRef(null);
+  const projectRef = useRef(null);
+
   const onScroll = () => {
     const button = ref.current;
     button.style.opacity = '0';
@@ -31,11 +35,10 @@ const Portfolio = () => {
     }
   }, [onScroll]);
 
-  console.log(document.location);
-
 
   return (
     <>
+      <div ref={topRef} style={{position: 'absolute', top: '0'}}></div>
       <ScrollContainer>
         <ScrollPage>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} >
@@ -59,8 +62,8 @@ const Portfolio = () => {
               </Animator>
             </div>
             <div>
-              <a href="#projects">
-                <button ref={ref} type="button" className="rounded-3 style-top-button">
+              <a onClick={() => projectRef.current.scrollIntoView()}>
+                <button ref={buttonRef} type="button" className="rounded-3 style-top-button">
                   Check out my work below ⬇️
                 </button>
               </a>
@@ -68,7 +71,7 @@ const Portfolio = () => {
           </div>
         </ScrollPage>
         <ScrollPage>
-          <div id="projects"></div>
+          <div ref={projectRef}></div>
           <Animator animation={batch(FadeIn(), StickyIn())}>
             <div className="style-project-div">
               <h3>Let's Get Quizzical</h3>
@@ -169,9 +172,9 @@ const Portfolio = () => {
                   <NavLink to="/contact">
                     <button className="style-bottom-button">Contact Me</button>
                   </NavLink>
-                  <NavLink to="/">
+                  <a onClick={() => topRef.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })}>
                     <button className="style-bottom-button">Back to Top ⬆️</button>
-                  </NavLink>
+                  </a>
               </div>
               <div>
                 <a href="https://github.com/djbartolini">
