@@ -64,3 +64,15 @@
 .style-a {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 992px) {
+  .style-main-text {
+    flex-direction: column;
+   }
+   .style-about-text {
+    width: 80vw;
+   }
+   .style-about-bottom {
+    width: 80vw;
+   }
+ }

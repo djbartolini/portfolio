@@ -187,9 +187,9 @@ button:active {
     border-radius: 16px;
   }
   .style-top-button {
-    transform: translate(0, -28vh);
+    transform: translate(-25vw, -10vh);
     position: absolute;
-    bottom: -10px;
+    bottom: 30px;
     font-size: 14px;
   }
   .style-project {
