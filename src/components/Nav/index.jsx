@@ -12,13 +12,13 @@ const Nav = () => {
       </article>
       <article className='nav-item'>
         {document.location.pathname === '/about' 
-          ? <a href='/about' className='nav-link-active'>About Me</a> 
-          : <a href='/about' className='nav-link'>About Me</a>}
+          ? <a href='/#/about' className='nav-link-active'>About Me</a> 
+          : <a href='/#/about' className='nav-link'>About Me</a>}
       </article>
       <article className='nav-item'>
         {document.location.pathname === '/contact' 
-          ? <a href='/contact' className='nav-link-active'>Contact</a> 
-          : <a href='/contact' className='nav-link'>Contact</a>}
+          ? <a href='/#/contact' className='nav-link-active'>Contact</a> 
+          : <a href='/#/contact' className='nav-link'>Contact</a>}
       </article>
     </div>
   )

@@ -160,10 +160,10 @@ const Portfolio = () => {
               <p style={{ fontSize: "20px" }}>I would be happy to work with you!</p>
               <p style={{ marginBottom: "2rem", fontSize: "20px" }}>Please use the <a style={{ color: "#fff" }} href="/contact">contact form</a> or message me directly for more information.</p>
               <div style={{ margin: "1rem", display: "flex" }}>
-                  <a href="/about">
+                  <a href="/#/about">
                     <button className="style-bottom-button">About Me</button>
                   </a>
-                  <a href="/about">
+                  <a href="/#/contact">
                     <button className="style-bottom-button">Contact Me</button>
                   </a>
                   <a href="/">
