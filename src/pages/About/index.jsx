@@ -6,6 +6,8 @@ import github from '/assets/github.png';
 import linkedin from '/assets/linkedin.png';
 
 const About = () => {
+  console.log(document.location);
+
   return (
     <>
       <div className="style-hi">

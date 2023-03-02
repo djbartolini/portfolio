@@ -1,25 +1,41 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import './style.css';
 
+const Nav = ({ currentPage, pages }) => {
 
-const Nav = () => {
-  console.log(document.location.pathname);
+
   return (
     <div id='nav'>
-      <article className='nav-item'>
-        {document.location.pathname === '/' 
-          ? <a href='/' className='nav-link-active'>Portfolio</a> 
-          : <a href='/' className='nav-link'>Portfolio</a>}
+      <article className="nav-item">
+        <NavLink 
+          to="/"
+          className={({ isActive }) =>
+            isActive ? 'nav-link-active' : 'nav-link'
+          }
+        >
+          Portfolio
+        </NavLink>
       </article>
-      <article className='nav-item'>
-        {document.location.pathname === '/#/about' 
-          ? <a href='/#/about' className='nav-link-active'>About Me</a> 
-          : <a href='/#/about' className='nav-link'>About Me</a>}
+      <article className="nav-item">
+        <NavLink 
+          to="/about"
+          className={({ isActive }) =>
+            isActive ? 'nav-link-active' : 'nav-link'
+          }
+        >
+          About Me
+        </NavLink>
       </article>
-      <article className='nav-item'>
-        {document.location.pathname === '/#/contact' 
-          ? <a href='/#/contact' className='nav-link-active'>Contact</a> 
-          : <a href='/#/contact' className='nav-link'>Contact</a>}
+      <article className="nav-item">
+        <NavLink 
+          to="/contact"
+          className={({ isActive }) =>
+            isActive ? 'nav-link-active' : 'nav-link'
+          }
+        >
+          Contact
+        </NavLink>
       </article>
     </div>
   )

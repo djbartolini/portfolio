@@ -6,7 +6,7 @@ import './style.css';
 import favicon from '/assets/dev-favicon.svg';
 
 const Header = () => {
-
+ 
   return (
     <header>
         <div className="nav-parent">

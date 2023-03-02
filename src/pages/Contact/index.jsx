@@ -43,6 +43,8 @@ export default function Contact() {
     setText('');
   }
 
+  console.log(document.location);
+
   return (
     <div className="page container">
       <div className="row mb-3">

@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { NavLink } from 'react-router-dom';
 import {
   Animator, ScrollContainer, ScrollPage, batch,
   Fade, FadeIn, FadeOut, Move,
@@ -29,6 +30,8 @@ const Portfolio = () => {
       document.addEventListener("scroll", onScroll);
     }
   }, [onScroll]);
+
+  console.log(document.location);
 
 
   return (
@@ -160,15 +163,15 @@ const Portfolio = () => {
               <p style={{ fontSize: "20px" }}>I would be happy to work with you!</p>
               <p style={{ marginBottom: "2rem", fontSize: "20px" }}>Please use the <a style={{ color: "#fff" }} href="/contact">contact form</a> or message me directly for more information.</p>
               <div style={{ margin: "1rem", display: "flex" }}>
-                  <a href="/#/about">
+                  <NavLink to="/about">
                     <button className="style-bottom-button">About Me</button>
-                  </a>
-                  <a href="/#/contact">
+                  </NavLink>
+                  <NavLink to="/contact">
                     <button className="style-bottom-button">Contact Me</button>
-                  </a>
-                  <a href="/">
+                  </NavLink>
+                  <NavLink to="/">
                     <button className="style-bottom-button">Back to Top ⬆️</button>
-                  </a>
+                  </NavLink>
               </div>
               <div>
                 <a href="https://github.com/djbartolini">
