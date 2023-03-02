@@ -19,17 +19,17 @@ import linkedin from '/assets/linkedin.png';
 const Portfolio = () => {
   const ref = useRef();
 
-  const buttonRef = useRef();
+  const buttonRef = useRef(null);
   const topRef = useRef(null);
   const projectRef = useRef(null);
 
   const onScroll = () => {
-    const button = ref.current;
+    const button = buttonRef.current;
     button.style.opacity = '0';
   }
 
   useEffect(() => {
-    const button = ref.current;
+    const button = buttonRef.current;
     if (button) {
       document.addEventListener("scroll", onScroll);
       window.addEventListener("touchMove", onScroll);
@@ -64,7 +64,7 @@ const Portfolio = () => {
             </div>
             <div>
               <a onClick={() => projectRef.current.scrollIntoView()}>
-                <button ref={buttonRef} type="button" className="rounded-3 style-top-button">
+                <button ref={buttonRef} type="button" className="style-top-button">
                   Check out my work below ⬇️
                 </button>
               </a>
