@@ -32,6 +32,7 @@ const Portfolio = () => {
     const button = ref.current;
     if (button) {
       document.addEventListener("scroll", onScroll);
+      window.addEventListener("touchMove", onScroll);
     }
   }, [onScroll]);
 

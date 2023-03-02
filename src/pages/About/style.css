@@ -75,4 +75,11 @@
    .style-about-bottom {
     width: 80vw;
    }
+   .style-hi {
+    font-size: 28px;
+  }
+  .style-asheville {
+    font-size: 20px;
+    display: inline-flex;
+  }
  }
