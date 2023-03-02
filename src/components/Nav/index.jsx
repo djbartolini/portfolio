@@ -3,6 +3,7 @@ import './style.css';
 
 
 const Nav = () => {
+  console.log(document.location.pathname);
   return (
     <div id='nav'>
       <article className='nav-item'>
