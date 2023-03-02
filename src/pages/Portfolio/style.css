@@ -98,6 +98,7 @@
 
 .style-top-button {
   color: white;
+  background-color: #242424ce;
   position: static;
   transform: translate(0, 28vh);
   border-radius: 6px;
@@ -137,6 +138,8 @@
 }
 
 .style-bottom-button {
+  background-color: #242424ce;
+  color: #f9f9f9;
   font-size: 18px;
   border-radius: 6px;
   width: 180px;
@@ -202,6 +205,8 @@ button:active {
     font-size: 16px;
   }
   .style-bottom-button {
+    background-color: #242424ce;
+    color: #f9f9f9;
     font-size: 14px;
     border-radius: 4px;
     width: 90px;
