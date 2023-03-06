@@ -116,8 +116,7 @@ const Portfolio = () => {
           </div>
         </ScrollPage>
         <ScrollPage>
-          <Animator>
-          <div className="cards">
+          <div>
             <div className="style-card">
               <div className="style-card-header">
                 <span>Your&nbsp;</span>
@@ -146,8 +145,6 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          </Animator>
-          <Animator>
           <div>
             <div className="style-card">
               <p className="style-seo">My goals are your goals when designing and building your websites and web apps.</p>
@@ -158,15 +155,14 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          </Animator>
         </ScrollPage>
         <ScrollPage>
           <Animator animation={batch(FadeIn(), Sticky())}>
-            <div style={{ transform: "translate(0, 12vh)", zIndex: "-1" }}>
-              <h5 style={{ fontSize: "40px", marginBottom: "2rem" }}>Thanks for checking out my work!</h5>
-              <p style={{ fontSize: "20px" }}>I would be happy to work with you!</p>
-              <p style={{ marginBottom: "2rem", fontSize: "20px" }}>Please use the <a style={{ color: "#fff" }} href="/contact">contact form</a> or message me directly for more information.</p>
-              <div style={{ margin: "1rem", display: "flex" }}>
+            <div className="style-bottom-div">
+              <h5 className="style-bottom-h5">Thanks for checking out my work!</h5>
+              <p className="style-bottom-p">I would be happy to work with you!</p>
+              <p className="style-bottom-p2">Please use the <a style={{ color: "#fff" }} href="/contact">contact form</a> or message me directly for more information.</p>
+              <div className="style-bottom-links">
                   <NavLink to="/about">
                     <button className="style-bottom-button">About Me</button>
                   </NavLink>

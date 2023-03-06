@@ -117,6 +117,10 @@
   font-size: 14px;
 }
 
+.cards {
+  width: 100%
+}
+
 .style-card {
   background-color: #242424ce;
   margin: 0 auto 3rem auto;
@@ -137,6 +141,11 @@
   margin: 0.5rem 0;
 }
 
+.style-bottom-div {
+  max-width: 100vw;
+  transform: translate(0, 12vh);
+}
+
 .style-bottom-button {
   background-color: #242424ce;
   color: #f9f9f9;
@@ -146,7 +155,27 @@
   margin: 1em;
 }
 
-h3, h4 {
+.style-bottom-h5 {
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.style-bottom-p {
+  font-size: 20px;
+}
+
+.style-bottom-p2 {
+  margin-bottom: 2rem;
+  font-size: 20px;
+}
+
+.style-bottom-links {
+  margin: 1rem;
+  display: flex;
+}
+
+h3,
+h4 {
   font-family: monospace;
   color: white;
 }
@@ -156,9 +185,11 @@ button {
   padding: 0.6em 1.2em;
   transition: opacity 1s, border-color 0.25s;
 }
+
 button:hover {
   border-color: #8c65db;
 }
+
 button:active {
   opacity: 0;
 }
@@ -168,42 +199,77 @@ button:active {
     transform: translate(240px, -25vh);
     font-size: 24px;
   }
+
   .daniel-div {
     display: inline-block;
     width: 100%
   }
+
   .top-p-div {
     display: inline-block;
     transform: translate(0, 0);
     line-height: 0.75;
   }
+
   .style-quizzical-p {
     font-size: 16px;
   }
+
   .style-top-p {
     transform: translate(0, -69px);
     font-size: 16px;
   }
+
   .style-photo {
     transform: translate(0, 25vh);
     height: 360px;
     border-radius: 16px;
   }
+
   .style-top-button {
     transform: translate(-25vw, -10vh);
     position: absolute;
     bottom: 30px;
     font-size: 14px;
   }
+
   .style-project {
     width: 70vw;
   }
+  .style-card {
+    margin: 0 0 3rem 0;
+    padding: 1rem;
+    display: block;
+    border-radius: 1rem;
+  }
+
   .style-card-header {
     font-size: 24px;
   }
+
   .style-seo {
     font-size: 16px;
   }
+
+  .style-bottom-h5 {
+    font-size: 28px;
+    margin-bottom: 2rem;
+  }
+
+  .style-bottom-p {
+    font-size: 16px;
+  }
+
+  .style-bottom-p2 {
+    margin-bottom: 2rem;
+    font-size: 16px;
+  }
+
+  .style-bottom-links {
+    margin: 0;
+    display: flex;
+  }
+
   .style-bottom-button {
     background-color: #242424ce;
     color: #f9f9f9;
@@ -214,7 +280,7 @@ button:active {
 }
 
 @media screen and (max-width: 992px) {
- .style-small-projects {
+  .style-small-projects {
     display: block;
   }
 }
