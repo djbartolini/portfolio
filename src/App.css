@@ -2,7 +2,6 @@
   text-align: center;
   color: white;
   overflow-x: hidden;
-  position: relative;
 }
 
 
@@ -12,4 +11,5 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  height: 100%;
 }
