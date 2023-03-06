@@ -35,7 +35,7 @@ const About = () => {
           <span className="style-text-gradient-2">your inspiration </span>
           <span>and </span>
           <span className="style-text-gradient-2">your brand </span>
-          <span>to the possibilities of website development.</span>
+          <span>to the possibilities of website development. </span>
           <span>I can give your website the power of programming's modern tools - </span>
           <span className="style-text-gradient-1">search engine optimization</span>
           <span> - </span>
