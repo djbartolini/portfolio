@@ -1,10 +1,13 @@
 #root, body {
   text-align: center;
+  color: white;
+  overflow-x: hidden;
+}
+
+body {
   background-image: url('../assets/background.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  color: white;
-  overflow-x: hidden;
   height: 100vh;
 }
