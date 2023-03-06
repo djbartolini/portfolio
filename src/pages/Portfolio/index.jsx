@@ -80,7 +80,7 @@ const Portfolio = () => {
               <a className="style-project-link" href="https://young-fortress-52703.herokuapp.com/">Access the App</a>
             </div>
             <img src={quizzical} className="quizzical" />
-            <p className="style-quizzical-p">A Quiz App that features quizzes on JavaScript, built in JavaScript. Powered by MongoDB and GraphQL, templated in React.</p>
+            <p className="style-quizzical-p">A Quiz App all about JavaScript! Powered by GraphQL and Node.js, templated in React.</p>
             <p className="web-dev style-quizzical-tech">Technologies Used: &nbsp;</p>
             <p className="style-quizzical-list">React.js, MongoDB, GraphQL, Express.js, Node.js, Chart.js, Vanta.js</p>
           </Animator>
