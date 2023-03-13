@@ -7,12 +7,15 @@ import linkedin from '/assets/linkedin.png';
 
 
 export default function Contact() {
+  const [subject, setSubject] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [text, setText] = useState('');
+  const [message, setMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
+    setErrorMessage('');
+
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
@@ -21,16 +24,18 @@ export default function Contact() {
       setName(inputValue);
     } else if (inputType === 'email') {
       setEmail(inputValue);
-    } else {
-      setText(inputValue);
+    } else if (inputType === 'subject') {
+      setSubject(inputValue);
+    } else if (inputType === 'message') {
+      setMessage(inputValue);
     }
-
   }
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    if (!name || !email || !text) {
+
+    if (!subject || !name || !email || !message) {
       setErrorMessage('All fields required')
     }
     if (email && !validateEmail(email)) {
@@ -38,15 +43,43 @@ export default function Contact() {
       return;
     }
 
+    const form = document.getElementById('form');
+    const formData = new FormData(form);
+    const formObject = Object.fromEntries(formData);
+    const json = JSON.stringify(formObject);
+    console.log(formObject);
+    console.log(json);
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          setErrorMessage(`Sent message: ${formObject.subject} to Daniel!`);
+        } else {
+          console.log(response);
+          setErrorMessage('Something went wrong!');
+        }
+      })
+      .catch(error => {
+        console.log(error);
+        setErrorMessage('Something went wrong!');
+      });
+
     setName('');
     setEmail('');
-    setText('');
+    setMessage('');
   }
 
-  console.log(document.location);
 
   return (
-    <div className="page container">
+    <div className="page container contact">
       <div className="row mb-3">
         <div className="col-12">
           <h2 style={{ textAlign: "center" }}>Contact</h2>
@@ -63,25 +96,28 @@ export default function Contact() {
               <img style={{ height: "100px" }} src={linkedin}></img>
             </a>
           </div>
-          <select className="form-select mb-3" aria-label="Default select example">
-            <option selected style={{ backgroundColor: "#242424ce", color: "#fff" }}>Reason:</option>
-            <option value="1">Get a Quote</option>
-            <option value="2">Leave a Testimonial</option>
-            <option value="3">Make a Suggestion</option>
-          </select>
-          <div className="input-group mb-3">
-            <span className="input-group-text border-dark" id="basic-addon1" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Name</span>
-            <input onChange={handleInputChange} name="name" className="form-control border-dark" placeholder="First and Last Name" aria-label="Username" aria-describedby="basic-addon1" />
-          </div>
-          <div className="input-group mb-3">
-            <span className="input-group-text border-dark" id="basic-addon2" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Email</span>
-            <input onChange={handleInputChange} name="email" className="form-control border-dark" placeholder="Email" aria-label="Username" aria-describedby="basic-addon2" />
-          </div>
-          <div className="input-group mb-3">
-            <span className="input-group-text border-dark" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Message</span>
-            <textarea onChange={handleInputChange} name="text" className="form-control border-dark" aria-label="With textarea"></textarea>
-          </div>
-          <button onClick={handleFormSubmit} type="submit" className="btn" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Submit</button>
+          <form action="https://api.web3forms.com/submit" method="POST" id="form">
+            <input type="hidden" name="access_key" value="435dca67-14b8-4c52-8c14-5bfe8b24dd43"></input>
+            <input type="hidden" name="subject" value="New Submission From Portfolio Form"></input>
+
+            <div className="input-group mb-3">
+              <span className="input-group-text border-dark" id="basic-addon1" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Subject</span>
+              <input onChange={handleInputChange} name="subject" className="form-control border-dark" placeholder="Subject" aria-label="Username" aria-describedby="basic-addon1" />
+            </div>
+            <div className="input-group mb-3">
+              <span className="input-group-text border-dark" id="basic-addon1" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Name</span>
+              <input onChange={handleInputChange} name="name" className="form-control border-dark" placeholder="First and Last Name" aria-label="Username" aria-describedby="basic-addon1" />
+            </div>
+            <div className="input-group mb-3">
+              <span className="input-group-text border-dark" id="basic-addon2" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Email</span>
+              <input onChange={handleInputChange} name="email" className="form-control border-dark" placeholder="Email address" aria-label="Username" aria-describedby="basic-addon2" />
+            </div>
+            <div className="input-group mb-3">
+              <span className="input-group-text border-dark" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Message</span>
+              <textarea onChange={handleInputChange} name="message" className="form-control border-dark" aria-label="With textarea"></textarea>
+            </div>
+            <button onClick={handleFormSubmit} type="submit" className="btn" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Submit</button>
+          </form>
         </div>
       </div>
       {errorMessage && (
