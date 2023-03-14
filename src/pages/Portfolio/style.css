@@ -194,6 +194,10 @@ button:active {
   opacity: 0;
 }
 
+i {
+  margin: 0 4px;
+}
+
 @media screen and (max-width: 820px) {
   h2 {
     transform: translate(240px, -25vh);

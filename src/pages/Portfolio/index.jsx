@@ -39,7 +39,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <div ref={topRef} style={{position: 'absolute', top: '0'}}></div>
+      <div ref={topRef} style={{ position: 'absolute', top: '0' }}></div>
       <ScrollContainer>
         <ScrollPage>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }} >
@@ -76,10 +76,18 @@ const Portfolio = () => {
           <Animator animation={batch(FadeIn(), StickyIn())}>
             <div className="style-project-div">
               <h3>Let's Get Quizzical</h3>
-              <a className="style-project-link" href="https://github.com/djbartolini/quizQL">GitHub</a>
-              <a className="style-project-link" href="https://young-fortress-52703.herokuapp.com/">Access the App</a>
+              <a className="style-project-link" href="https://github.com/djbartolini/quizQL" target="_blank">
+                <i className="fa-solid fa-code"></i>
+                Code
+              </a>
+              <a className="style-project-link" href="https://young-fortress-52703.herokuapp.com/" target="_blank">
+                <i className="fa-sharp fa-solid fa-eye"></i>
+                App
+              </a>
             </div>
-            <img src={quizzical} className="quizzical" />
+            <a href="https://young-fortress-52703.herokuapp.com/">
+              <img src={quizzical} className="quizzical" alt="screenshot of Quizzical app" />
+            </a>
             <p className="style-quizzical-p">A Quiz App all about JavaScript! Powered by GraphQL and Node.js, templated in React.</p>
             <p className="web-dev style-quizzical-tech">Technologies Used: &nbsp;</p>
             <p className="style-quizzical-list">React.js, MongoDB, GraphQL, Express.js, Node.js, Chart.js, Vanta.js</p>
@@ -92,11 +100,19 @@ const Portfolio = () => {
                 <div className="style-small-div">
                   <h4>Sofa Kings</h4>
                   <span>
-                    <a className="style-project-link" href="https://github.com/djbartolini/sofa-king-cool">GitHub</a>
-                    <a className="style-project-link" href="http://quiet-river-37193.herokuapp.com/">App</a>
+                    <a className="style-project-link" href="https://github.com/djbartolini/sofa-king-cool" target="_blank">
+                      <i className="fa-solid fa-code"></i>
+                      Code
+                    </a>
+                    <a className="style-project-link" href="http://quiet-river-37193.herokuapp.com/" target="_blank">
+                      <i className="fa-sharp fa-solid fa-eye"></i>
+                      App
+                    </a>
                   </span>
                 </div>
-                <img className="style-project" src={sofaKing} />
+                <a href="http://quiet-river-37193.herokuapp.com/" target="_blank">
+                  <img className="style-project" src={sofaKing} alt="screenshot of Sofa Kings app" />
+                </a>
                 <p className="style-project-text">A RESTful furniture showcasing app that uses Cloudinary to upload custom furniture. Built using sequelize and Handlebars.js.</p>
               </Animator>
             </div>
@@ -105,11 +121,19 @@ const Portfolio = () => {
                 <div className="style-small-div">
                   <h4>Weather Dashboard</h4>
                   <span>
-                    <a className="style-project-link" href="https://github.com/djbartolini/weather-dashboard">GitHub</a>
-                    <a className="style-project-link" href="https://djbartolini.github.io/weather-dashboard/">App</a>
+                    <a className="style-project-link" href="https://github.com/djbartolini/weather-dashboard" target="_blank">
+                      <i className="fa-solid fa-code"></i>
+                      Code
+                    </a>
+                    <a className="style-project-link" href="https://djbartolini.github.io/weather-dashboard/" target="_blank">
+                      <i className="fa-sharp fa-solid fa-eye"></i>
+                      App
+                    </a>
                   </span>
                 </div>
-                <img className="style-project" src={weather} />
+                <a href="https://djbartolini.github.io/weather-dashboard/" target="_blank">
+                  <img className="style-project" src={weather} alt="screenshot of Weather Dashboard app" />
+                </a>
                 <p className="style-project-text">A simple weather app that leverages API calls to OpenWeather to provide a forecast for any city.</p>
               </Animator>
             </div>
@@ -163,15 +187,15 @@ const Portfolio = () => {
               <p className="style-bottom-p">I would be happy to work with you!</p>
               <p className="style-bottom-p2">Please use the <a style={{ color: "#fff" }} href="/contact">contact form</a> or message me directly for more information.</p>
               <div className="style-bottom-links">
-                  <NavLink to="/about">
-                    <button className="style-bottom-button">About Me</button>
-                  </NavLink>
-                  <NavLink to="/contact">
-                    <button className="style-bottom-button">Contact Me</button>
-                  </NavLink>
-                  <a onClick={() => topRef.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })}>
-                    <button className="style-bottom-button">Back to Top ⬆️</button>
-                  </a>
+                <NavLink to="/about">
+                  <button className="style-bottom-button">About Me</button>
+                </NavLink>
+                <NavLink to="/contact">
+                  <button className="style-bottom-button">Contact Me</button>
+                </NavLink>
+                <a onClick={() => topRef.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })}>
+                  <button className="style-bottom-button">Back to Top ⬆️</button>
+                </a>
               </div>
               <div>
                 <a href="https://github.com/djbartolini">

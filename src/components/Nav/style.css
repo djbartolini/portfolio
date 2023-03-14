@@ -5,6 +5,7 @@
 }
 
 .nav-item {
+  font-size: 16px;
   color: #ffffff;
   padding: 0 2rem;
 }
@@ -20,6 +21,7 @@
     margin-right: 0;
   }
   .nav-item {
+    font-size: 14px;
     padding: 0 1rem 0.75rem 1rem;
   }
 }

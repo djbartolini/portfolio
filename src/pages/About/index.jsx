@@ -6,10 +6,8 @@ import github from '/assets/github.png';
 import linkedin from '/assets/linkedin.png';
 
 const About = () => {
-  console.log(document.location);
-
   return (
-    <>
+    <div className="page about">
       <div className="style-hi">
         <span>Hi, I'm &nbsp;</span><span className="style-text-gradient-1">Daniel Bartolini.</span>
       </div>
@@ -63,7 +61,7 @@ const About = () => {
           <img style={{ height: "100px" }} src={linkedin}></img>
         </a>
       </div>
-    </>
+    </div>
   )
 }
 

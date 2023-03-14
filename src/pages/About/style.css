@@ -1,3 +1,7 @@
+.about {
+  height: 100vh;
+}
+
 .style-text-gradient-1 {
   background: -webkit-linear-gradient(#ff59d8, #c0eaff);
   -webkit-background-clip: text;
@@ -41,7 +45,8 @@
 }
 
 .style-about-photo {
-  border-radius: 1rem;
+  border-radius: 50%;
+  border: 0.75rem solid #242424ce;
   width: 42vw;
   margin: 2rem;
 }
