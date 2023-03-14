@@ -47,9 +47,7 @@ export default function Contact() {
     const formData = new FormData(form);
     const formObject = Object.fromEntries(formData);
     const json = JSON.stringify(formObject);
-    console.log(formObject);
-    console.log(json);
-
+    
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: {
@@ -61,7 +59,7 @@ export default function Contact() {
       .then(async (response) => {
         let json = await response.json();
         if (response.status == 200) {
-          setErrorMessage(`Sent message: ${formObject.subject} to Daniel!`);
+          setErrorMessage('Sent!');
         } else {
           console.log(response);
           setErrorMessage('Something went wrong!');
@@ -116,7 +114,7 @@ export default function Contact() {
               <span className="input-group-text border-dark" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Message</span>
               <textarea onChange={handleInputChange} name="message" className="form-control border-dark" aria-label="With textarea"></textarea>
             </div>
-            <button onClick={handleFormSubmit} type="submit" className="btn" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Submit</button>
+            <button onClick={handleFormSubmit} onTouchStart={handleFormSubmit} type="submit" className="btn" style={{ backgroundColor: "#242424ce", color: "#fff" }}>Submit</button>
           </form>
         </div>
       </div>
