@@ -108,7 +108,7 @@ const Portfolio = () => {
                       Projects
                     </button>
                   </a>
-                  <a onClick={() => skillsRef.current.scrollIntoView({ block: 'start' })}>
+                  <a onClick={() => skillsRef.current.scrollIntoView({ block: 'center' })}>
                     <button type="button" className="style-top-button">
                       Skills
                     </button>
@@ -205,13 +205,13 @@ const Portfolio = () => {
               </div>
               <br></br>
               <div className="style-seo">
-                <p>Click one to see my skills!</p>
+                <p>Hover or click to select a skills stack</p>
               </div>
               <div className="style-skills">
                 <div className="style-skill-icons">
-                  <img onClick={handleSkills} name="sun" className="style-skill-icon style-skill-sun" src={sun}></img>
-                  <img onClick={handleSkills} name="earth" className="style-skill-icon style-skill-earth" src={earth}></img>
-                  <img onClick={handleSkills} name="moon" className="style-skill-icon style-skill-moon" src={moon}></img>
+                  <img onMouseEnter={handleSkills} onClick={handleSkills} name="sun" className="style-skill-icon style-skill-sun" src={sun}></img>
+                  <img onMouseEnter={handleSkills} onClick={handleSkills} name="earth" className="style-skill-icon style-skill-earth" src={earth}></img>
+                  <img onMouseEnter={handleSkills} onClick={handleSkills} name="moon" className="style-skill-icon style-skill-moon" src={moon}></img>
                 </div>
                 <div className="style-skill-text">
                   <h5>{skillList}</h5>
