@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { NavLink } from 'react-router-dom';
 import {
   Animator, ScrollContainer, ScrollPage, batch,
@@ -15,26 +15,73 @@ import sofaKing from '/assets/sofa-king.png';
 import github from '/assets/github.png';
 import linkedin from '/assets/linkedin.png';
 
+import earth from '/assets/earth.png';
+import sun from '/assets/sun.png';
+import moon from '/assets/moon.png';
+
+import js from '/assets/js.png';
+import html5 from '/assets/html5.png';
+import css3 from '/assets/css3.png';
+import react from '/assets/react.png';
+import bootstrap from '/assets/bootstrap.png';
+import gimp from '/assets/gimp.png';
+import figma from '/assets/figma.png';
+import node from '/assets/node.png';
+import express from '/assets/express.png';
+import mysql from '/assets/mysql.png';
+import mongodb from '/assets/mongodb.png';
+import graphql from '/assets/graphql.png';
+import api from '/assets/api.png';
+import vscode from '/assets/vscode.png';
+import githubSkill from '/assets/github-skill.png';
+import heroku from '/assets/heroku.png';
+import bash from '/assets/bash.png';
+import sequelize from '/assets/sequelize.png';
+import mongoose from '/assets/mongoose.png';
+
+
+
 
 const Portfolio = () => {
   const ref = useRef();
-
-  const buttonRef = useRef(null);
   const topRef = useRef(null);
   const projectRef = useRef(null);
+  const skillsRef = useRef(null);
+  const bottomRef = useRef(null);
 
-  const onScroll = () => {
-    const button = buttonRef.current;
-    button.style.opacity = '0';
-  }
+  const [skills, setSkills] = useState('');
+  const [skillList, setSkillList] = useState('');
 
-  useEffect(() => {
-    const button = buttonRef.current;
-    if (button) {
-      document.addEventListener("scroll", onScroll);
-      window.addEventListener("touchMove", onScroll);
+  const handleSkills = (e) => {
+    const { target } = e;
+    const img = target.getAttribute('name');
+
+    const sun = document.getElementsByName('sun')[0];
+    const earth = document.getElementsByName('earth')[0];
+    const moon = document.getElementsByName('moon')[0];
+
+    if (img === 'earth') {
+      setSkillList('Front End:');
+      setSkills([[js, 'JavaScript'], [html5, 'HTML5'], [css3, 'CSS3'], [react, 'React'], [bootstrap, 'Bootstrap'], [gimp, 'GIMP'], [figma, 'Figma']]);
+      target.setAttribute('id', 'style-active-icon');
+      sun.removeAttribute('id');
+      moon.removeAttribute('id');
     }
-  }, [onScroll]);
+    if (img === 'sun') {
+      setSkillList('Back End:');
+      setSkills([[node, 'Node.js'], [express, 'Express.js'], [mysql, 'MySQL'], [mongodb, 'MongoDB'], [graphql, 'GraphQL'], [api, 'REST API']]);
+      target.setAttribute('id', 'style-active-icon');
+      earth.removeAttribute('id');
+      moon.removeAttribute('id');
+    }
+    if (img === 'moon') {
+      setSkillList('Tools:');
+      setSkills([[vscode, 'VSCode'], [githubSkill, 'GitHub'], [heroku, 'Heroku'], [bash, 'Bash'], [sequelize, 'Sequelize'], [mongoose, 'Mongoose']]);
+      target.setAttribute('id', 'style-active-icon');
+      earth.removeAttribute('id');
+      sun.removeAttribute('id');
+    }
+  }
 
 
   return (
@@ -55,6 +102,23 @@ const Portfolio = () => {
                   <p className="style-top-p web-dev">web developer &nbsp;</p>
                   <p className="style-top-p">from Asheville, NC</p>
                 </div>
+                <div className="top-button-div">
+                  <a onClick={() => projectRef.current.scrollIntoView()}>
+                    <button type="button" className="style-top-button">
+                      Projects
+                    </button>
+                  </a>
+                  <a onClick={() => skillsRef.current.scrollIntoView({ block: 'start' })}>
+                    <button type="button" className="style-top-button">
+                      Skills
+                    </button>
+                  </a>
+                  <a onClick={() => bottomRef.current.scrollIntoView()}>
+                    <button type="button" className="style-top-button">
+                      Links
+                    </button>
+                  </a>
+                </div>
               </Animator>
             </div>
             <div>
@@ -62,18 +126,11 @@ const Portfolio = () => {
                 <img className="style-photo" src={photo} />
               </Animator>
             </div>
-            <div>
-              <a onClick={() => projectRef.current.scrollIntoView()}>
-                <button ref={buttonRef} type="button" className="style-top-button">
-                  Check out my work below ⬇️
-                </button>
-              </a>
-            </div>
           </div>
         </ScrollPage>
         <ScrollPage>
           <div ref={projectRef}></div>
-          <Animator animation={batch(FadeIn(), StickyIn())}>
+          <Animator animation={FadeIn()}>
             <div className="style-project-div">
               <h3>Let's Get Quizzical</h3>
               <a className="style-project-link" href="https://github.com/djbartolini/quizQL" target="_blank">
@@ -140,6 +197,41 @@ const Portfolio = () => {
           </div>
         </ScrollPage>
         <ScrollPage>
+          <div ref={skillsRef}></div>
+          <div>
+            <div className="style-skill-card">
+              <div className="style-card-header">
+                <span className="daniel">Skills:</span>
+              </div>
+              <br></br>
+              <div className="style-seo">
+                <p>Click one to see my skills!</p>
+              </div>
+              <div className="style-skills">
+                <div className="style-skill-icons">
+                  <img onClick={handleSkills} name="sun" className="style-skill-icon style-skill-sun" src={sun}></img>
+                  <img onClick={handleSkills} name="earth" className="style-skill-icon style-skill-earth" src={earth}></img>
+                  <img onClick={handleSkills} name="moon" className="style-skill-icon style-skill-moon" src={moon}></img>
+                </div>
+                <div className="style-skill-text">
+                  <h5>{skillList}</h5>
+                  <ul className="style-skill-list">
+                    {skills
+                      ? skills.map((skill) =>
+                        <div key={skill[1]} className="style-skill-item">
+                          <img style={{ height: "80px" }} src={skill[0]}></img>
+                          <li key={skill[1]}>{skill[1]}</li>
+                        </div>
+                      )
+                      : <li></li>
+                    }
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollPage>
+        <ScrollPage>
           <div>
             <div className="style-card">
               <div className="style-card-header">
@@ -182,6 +274,7 @@ const Portfolio = () => {
         </ScrollPage>
         <ScrollPage>
           <Animator animation={batch(FadeIn(), Sticky())}>
+            <div ref={bottomRef} style={{ position: 'absolute', bottom: '0' }}></div>
             <div className="style-bottom-div">
               <h5 className="style-bottom-h5">Thanks for checking out my work!</h5>
               <p className="style-bottom-p">I would be happy to work with you!</p>
