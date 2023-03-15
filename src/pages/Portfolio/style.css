@@ -50,6 +50,10 @@
   margin-bottom: 3rem;
 }
 
+.style-quizzical-text {
+  font-size: 14px;
+}
+
 .style-top-p {
   transform: translate(-240px, 24px);
   font-size: 24px;
@@ -88,7 +92,7 @@
 }
 
 .style-small-projects {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,6 +125,10 @@
 .style-project-text {
   margin: 1rem 2rem;
   font-size: 14px;
+}
+
+.style-weather-div {
+  margin-bottom: 3rem;
 }
 
 .cards {
@@ -200,6 +208,9 @@
   height: 150px;
 }
 
+.style-tech-icon {
+  height: 80px;
+}
 
 .style-skill-sun {
   height: 225px;
@@ -289,6 +300,10 @@ i {
     font-size: 16px;
   }
 
+  .style-quizzical-list {
+    margin-bottom: 0;
+  }
+
   .style-top-p {
     transform: translate(0, -69px);
     font-size: 16px;
@@ -310,6 +325,17 @@ i {
   .style-project {
     width: 70vw;
   }
+
+  .style-project-link {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .style-project-text {
+    font-size: 12px;
+    margin: 6px 1rem;
+  }
+
   .style-card {
     margin: 0 0 3rem 0;
     padding: 1rem;
@@ -357,23 +383,68 @@ i {
   .style-small-projects {
     display: block;
   }
+  .style-small-div {
+    width: 50%;
+    padding: 8px;
+  }
+  .style-small-div h4 {
+    font-size: 14px;
+  }
   .style-skills {
     display: block;
   }
-  
+  .style-skill-card {
+    background-color: #242424ce;
+    margin: 1rem auto 0 auto;
+    padding: 1rem;
+    width: 90%;
+    display: block;
+    border-radius: 1rem;
+  }
+  .style-card-header {
+    font-size: 20px;
+    display: inline-block;
+  }
+  .style-seo {
+    font-size: 16px;
+    display: inline-block;
+    margin: 0.5rem 0;
+  }
+  .style-skills {
+    display: block;
+  }
   .style-skill-icons {
     width: 100%;
   }
-  
+  .style-skill-text {
+    width: 100%;
+    min-height: 100%;
+    display: block;
+  }
+  .style-skill-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .style-skill-item {
+    margin: 4px 12px;
+  }
+  .style-tech-icon {
+    height: 60px;
+  }
   .style-skill-earth {
-    height: 150px;
+    height: 75px;
   }
-  
   .style-skill-sun {
-    height: 225px;
+    height: 120px;
+    opacity: 50%;
   }
-  
   .style-skill-moon {
-    height: 125px;
+    height: 75px;
+    opacity: 50%;
   }
 }

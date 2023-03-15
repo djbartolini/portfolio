@@ -146,6 +146,7 @@ const Portfolio = () => {
               <img src={quizzical} className="quizzical" alt="screenshot of Quizzical app" />
             </a>
             <p className="style-quizzical-p">A Quiz App all about JavaScript! Powered by GraphQL and Node.js, templated in React.</p>
+            <p className="style-quizzical-text"><em>Collaborators: </em>Adam Queen, Kass Rojas, Sai Monta</p>
             <p className="web-dev style-quizzical-tech">Technologies Used: &nbsp;</p>
             <p className="style-quizzical-list">React.js, MongoDB, GraphQL, Express.js, Node.js, Chart.js, Vanta.js</p>
           </Animator>
@@ -170,10 +171,12 @@ const Portfolio = () => {
                 <a href="http://quiet-river-37193.herokuapp.com/" target="_blank">
                   <img className="style-project" src={sofaKing} alt="screenshot of Sofa Kings app" />
                 </a>
-                <p className="style-project-text">A RESTful furniture showcasing app that uses Cloudinary to upload custom furniture. Built using sequelize and Handlebars.js.</p>
+                <p className="style-project-text">A RESTful furniture showcasing app that uses Cloudinary to upload custom furniture.</p>
+                <p className="style-project-text"><em>Collaborators: </em>Adam Queen, Kass Rojas, Sai Monta</p>
+                <p className="style-project-text"><em>Technologies: </em>Handlebars, Sequelize ORM, Node.js, Express.js, Cloudinary, Bcrypt</p>
               </Animator>
             </div>
-            <div >
+            <div className="style-weather-div">
               <Animator animation={MoveIn(500, 0)}>
                 <div className="style-small-div">
                   <h4>Weather Dashboard</h4>
@@ -219,7 +222,7 @@ const Portfolio = () => {
                     {skills
                       ? skills.map((skill) =>
                         <div key={skill[1]} className="style-skill-item">
-                          <img style={{ height: "80px" }} src={skill[0]}></img>
+                          <img src={skill[0]} className="style-tech-icon"></img>
                           <li key={skill[1]}>{skill[1]}</li>
                         </div>
                       )

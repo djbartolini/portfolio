@@ -1,8 +1,18 @@
-# React Portolfio
+# Daniel Bartolini - Portfolio
 
 [Click Here to Access Live App](https://djbartolini.github.io/portfolio/)
 
-My name is Daniel Bartolini, and this is my portfolio! I hope you enjoy. I will be expanding upon it in the near future.
+My name is Daniel Bartolini, and this is my portfolio! It was made using React.JS and React Router, deployed through GH-pages. I hope you enjoy. I will be expanding upon it in the near future.
+
+Current and upcoming projects include:
+- Full-stack fundraiser website for a local family to help pay for their child's healthcare and therapeutic treatments.
+- Full-stack real estate web app for Dan Bartolini, an NC realtor - and also my dad!
+- Front-end react challenges.
+
+Featured apps:
+- [Let's Get Quizzical](https://young-fortress-52703.herokuapp.com/)
+- [Sofa King Cool](https://young-fortress-52703.herokuapp.com/)
+- [Weather Dashboard](https://djbartolini.github.io/weather-dashboard/)
 
 ## Table of Contents
   * [Usage](#usage)
@@ -20,10 +30,14 @@ This app was made using:
 * [React](https://reactjs.org/)
 * [Vite](https://vitejs.dev/)
 * [Node.js](https://nodejs.org/en/)
+* [React Router](https://reactrouter.com/en/main)
 * [React Scroll Motion](https://www.npmjs.com/package/react-scroll-motion)
+* [tsparticles](https://particles.js.org/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Font Awesome](https://fontawesome.com/)
 
 ## License
 This app is covered under the MIT license: [MIT](https://opensource.org/licenses/MIT)
 
 ## Support  
-If you encounter problems with this README generator, please reach out to me on GitHub at: https://github.com/djbartolini, or email me at dan@bartolini.dev.
+If you encounter problems with the website, please reach out to me on [GitHub](https://github.com/djbartolini), contact me through the form on the website, or email me at daniel@bartolini.dev.
