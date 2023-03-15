@@ -5,7 +5,7 @@
 }
 
 .top-p-div {
-  transform: translate(0, 2vh);
+  transform: translate(0, 1vh);
   display: flex;
 }
 
@@ -91,6 +91,10 @@
   border-radius: 36px;
 }
 
+.style-photo-div {
+  pointer-events: none;
+}
+
 .style-small-projects {
   min-height: 100vh;
   display: flex;
@@ -111,6 +115,7 @@
   color: white;
   background-color: #242424ce;
   border-radius: 6px;
+  position: static;
   z-index: 1;
   margin: 0 6px;
   opacity: 100%;
@@ -181,6 +186,7 @@
 .style-skill-list {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
@@ -188,7 +194,7 @@
 }
 
 .style-skill-item {
-  margin: 4px 12px;
+  margin: 4px 16px;
 }
 
 .style-skill-icon {

@@ -8,6 +8,8 @@ import {
 } from "react-scroll-motion";
 import './style.css'
 
+import resume from '/assets/resume.pdf';
+
 import photo from '/assets/dan-picture.jpg';
 import quizzical from '/assets/quizzical-demo.gif';
 import weather from '/assets/weather-dashboard.png';
@@ -38,6 +40,8 @@ import heroku from '/assets/heroku.png';
 import bash from '/assets/bash.png';
 import sequelize from '/assets/sequelize.png';
 import mongoose from '/assets/mongoose.png';
+import vite from '/assets/vite.png';
+import stackOverflow from '/assets/stack-overflow.png';
 
 
 
@@ -76,7 +80,7 @@ const Portfolio = () => {
     }
     if (img === 'moon') {
       setSkillList('Tools:');
-      setSkills([[vscode, 'VSCode'], [githubSkill, 'GitHub'], [heroku, 'Heroku'], [bash, 'Bash'], [sequelize, 'Sequelize'], [mongoose, 'Mongoose']]);
+      setSkills([[vscode, 'VSCode'], [githubSkill, 'GitHub'], [heroku, 'Heroku'], [bash, 'Bash'], [vite, 'Vite'], [sequelize, 'Sequelize'], [mongoose, 'Mongoose'], [stackOverflow, 'Stack Overflow']]);
       target.setAttribute('id', 'style-active-icon');
       earth.removeAttribute('id');
       sun.removeAttribute('id');
@@ -99,7 +103,7 @@ const Portfolio = () => {
               <Animator animation={batch(ZoomIn(), Sticky(), MoveOut(-1000, 0))}>
                 <div className="top-p-div">
                   <p className="style-top-p">I'm a &nbsp;</p>
-                  <p className="style-top-p web-dev">web developer &nbsp;</p>
+                  <p className="style-top-p web-dev">full stack developer &nbsp;</p>
                   <p className="style-top-p">from Asheville, NC</p>
                 </div>
                 <div className="top-button-div">
@@ -113,16 +117,16 @@ const Portfolio = () => {
                       Skills
                     </button>
                   </a>
-                  <a onClick={() => bottomRef.current.scrollIntoView()}>
+                  <a href="https://docs.google.com/document/d/1Y2A1n4WaXomMXgXftoILeuGGK7ozDxMTg4Oic_Xqzkg/" target="_blank">
                     <button type="button" className="style-top-button">
-                      Links
+                      Resume
                     </button>
                   </a>
                 </div>
               </Animator>
             </div>
             <div>
-              <Animator animation={batch(Fade(), Sticky(), MoveOut(1000, 0))}>
+              <Animator className="style-photo-div" animation={batch(Fade(), Sticky(), MoveOut(1000, 0))} style={{ zIndex: "0" }}>
                 <img className="style-photo" src={photo} />
               </Animator>
             </div>
