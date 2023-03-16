@@ -9,14 +9,7 @@ body {
   overflow-x: hidden;
   background-image: url('../assets/background.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: initial;
   background-size: cover;
-  height: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    background-attachment: initial;
-    height: 100svh;
-  }
+  height: 100svh;
 }

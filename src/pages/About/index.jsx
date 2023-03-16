@@ -13,7 +13,7 @@ const About = () => {
       </div>
       <div className="style-asheville">
         <span>I'm a &nbsp;</span>
-        <span className="style-text-gradient-2">web developer &nbsp;</span>
+        <span className="style-text-gradient-2">full stack developer &nbsp;</span>
         <span>from Asheville, NC</span>
       </div>
       <div className="style-main-text">

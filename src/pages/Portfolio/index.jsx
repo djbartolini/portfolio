@@ -199,6 +199,7 @@ const Portfolio = () => {
                   <img className="style-project" src={weather} alt="screenshot of Weather Dashboard app" />
                 </a>
                 <p className="style-project-text">A simple weather app that leverages API calls to OpenWeather to provide a forecast for any city.</p>
+                <p className="style-project-text"><em>Technologies: </em>Bootstrap, OpenWeather API, GeoCacher API</p>
               </Animator>
             </div>
           </div>
