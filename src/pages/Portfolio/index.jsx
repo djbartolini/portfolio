@@ -291,7 +291,7 @@ const Portfolio = () => {
                 <NavLink to="/about">
                   <button className="style-bottom-button">About Me</button>
                 </NavLink>
-                <NavLink to="/contact">
+                <NavLink to="/#/contact">
                   <button className="style-bottom-button">Contact Me</button>
                 </NavLink>
                 <a onClick={() => topRef.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })}>
