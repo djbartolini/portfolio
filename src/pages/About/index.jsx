@@ -18,6 +18,16 @@ const About = () => {
       </div>
       <div className="style-main-text">
         <div className="style-about-text">
+          <span>My home, Asheville, NC, is a local hub of creativity and craft. I grew up a musician and to this day I continue making funk music. Check out my music <a className="style-text-gradient-1 style-a" href="https://soundcloud.com/user-samo_the_third">here!</a> I am also a former emergency nurse, with 5 years of experience working on the frontlines, before and during the pandemic. I then decided to pivot my career and fully devote my time to more creative passions - design and programming - to create </span>
+          <span className="style-text-gradient-1">immersive, innovative </span>
+          <span>applications. My background in creative songwriting coupled with my critical thinking skills as an emergency healthcare provider has taught me a unique skillset that I apply to every ounce of code I develop.</span>
+        </div>
+        <div>
+          <img className="style-about-photo" src={aboutPhoto}></img>
+        </div>
+      </div>
+      <div className="style-main-bottom">
+        <div className="style-about-bottom">
           <span>I have a passion for </span>
           <span className="style-text-gradient-1">innovative design </span>
           <span>and </span>
@@ -41,16 +51,6 @@ const About = () => {
           <span> - </span>
           <span className="style-text-gradient-1">and functional integration</span>
           <span> - so that your brand stands out.</span>
-        </div>
-        <div>
-          <img className="style-about-photo" src={aboutPhoto}></img>
-        </div>
-      </div>
-      <div className="style-main-bottom">
-        <div className="style-about-bottom">
-          <span>My home, Asheville, NC, is a local hub of creativity and craft. I grew up a musician and to this day I continue making funk music. Check out my music <a className="style-text-gradient-1 style-a" href="https://soundcloud.com/user-samo_the_third">here!</a> I am also a former emergency nurse, with 5 years of experience working on the frontlines, before and during the pandemic. I then decided to pivot my career and fully devote my time to more creative passions - design and programming - to create </span>
-          <span className="style-text-gradient-1">immersive, innovative </span>
-          <span>applications. My background in creative songwriting coupled with my critical thinking skills as an emergency healthcare provider has taught me a unique skillset that I apply to every ounce of code I develop.</span>
         </div>
       </div>
       <div>
