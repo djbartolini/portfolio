@@ -133,6 +133,41 @@ const Portfolio = () => {
           </div>
         </ScrollPage>
         <ScrollPage>
+          <div ref={skillsRef}></div>
+          <div>
+            <div className="style-skill-card">
+              <div className="style-card-header">
+                <span className="daniel">Skills:</span>
+              </div>
+              <br></br>
+              <div className="style-seo">
+                <p>Hover or click to select a skills stack</p>
+              </div>
+              <div className="style-skills">
+                <div className="style-skill-icons">
+                  <img onMouseEnter={handleSkills} onClick={handleSkills} name="sun" className="style-skill-icon style-skill-sun" src={sun}></img>
+                  <img onMouseEnter={handleSkills} onClick={handleSkills} name="earth" className="style-skill-icon style-skill-earth" src={earth}></img>
+                  <img onMouseEnter={handleSkills} onClick={handleSkills} name="moon" className="style-skill-icon style-skill-moon" src={moon}></img>
+                </div>
+                <div className="style-skill-text">
+                  <h5>{skillList}</h5>
+                  <ul className="style-skill-list">
+                    {skills
+                      ? skills.map((skill) =>
+                        <div key={skill[1]} className="style-skill-item">
+                          <img src={skill[0]} className="style-tech-icon"></img>
+                          <li key={skill[1]}>{skill[1]}</li>
+                        </div>
+                      )
+                      : <li></li>
+                    }
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollPage>
+        <ScrollPage>
           <div ref={projectRef}></div>
           <Animator animation={FadeIn()}>
             <div className="style-project-div">
@@ -201,41 +236,6 @@ const Portfolio = () => {
                 <p className="style-project-text">A simple weather app that leverages API calls to OpenWeather to provide a forecast for any city.</p>
                 <p className="style-project-text"><em>Technologies: </em>Bootstrap, OpenWeather API, GeoCacher API</p>
               </Animator>
-            </div>
-          </div>
-        </ScrollPage>
-        <ScrollPage>
-          <div ref={skillsRef}></div>
-          <div>
-            <div className="style-skill-card">
-              <div className="style-card-header">
-                <span className="daniel">Skills:</span>
-              </div>
-              <br></br>
-              <div className="style-seo">
-                <p>Hover or click to select a skills stack</p>
-              </div>
-              <div className="style-skills">
-                <div className="style-skill-icons">
-                  <img onMouseEnter={handleSkills} onClick={handleSkills} name="sun" className="style-skill-icon style-skill-sun" src={sun}></img>
-                  <img onMouseEnter={handleSkills} onClick={handleSkills} name="earth" className="style-skill-icon style-skill-earth" src={earth}></img>
-                  <img onMouseEnter={handleSkills} onClick={handleSkills} name="moon" className="style-skill-icon style-skill-moon" src={moon}></img>
-                </div>
-                <div className="style-skill-text">
-                  <h5>{skillList}</h5>
-                  <ul className="style-skill-list">
-                    {skills
-                      ? skills.map((skill) =>
-                        <div key={skill[1]} className="style-skill-item">
-                          <img src={skill[0]} className="style-tech-icon"></img>
-                          <li key={skill[1]}>{skill[1]}</li>
-                        </div>
-                      )
-                      : <li></li>
-                    }
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
         </ScrollPage>

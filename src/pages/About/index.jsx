@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css'
 
-import aboutPhoto from '/assets/IMG_0477.jpg';
+import aboutPhoto from '/assets/photo.jpeg';
 import github from '/assets/github.png';
 import linkedin from '/assets/linkedin.png';
 
