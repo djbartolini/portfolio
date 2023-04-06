@@ -5,9 +5,9 @@
 My name is Daniel Bartolini, and this is my portfolio! It was made using React.JS and React Router, deployed through GH-pages. I hope you enjoy. I will be expanding upon it in the near future.
 
 Current and upcoming projects include:
-- Full-stack fundraiser website for a local family to help pay for their child's healthcare and therapeutic treatments.
+- Full-stack blog app made with Flask, sqlalchemy, and React
 - Full-stack real estate web app for Dan Bartolini, an NC realtor - and also my dad!
-- Front-end react challenges.
+
 
 Featured apps:
 - [Let's Get Quizzical](https://young-fortress-52703.herokuapp.com/)
