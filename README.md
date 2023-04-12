@@ -5,14 +5,13 @@
 My name is Daniel Bartolini, and this is my portfolio! It was made using React.JS and React Router, deployed through GH-pages. I hope you enjoy. I will be expanding upon it in the near future.
 
 Current and upcoming projects include:
-- Full-stack blog app made with Flask, sqlalchemy, and React
 - Full-stack real estate web app for Dan Bartolini, an NC realtor - and also my dad!
 
 
 Featured apps:
 - [Let's Get Quizzical](https://young-fortress-52703.herokuapp.com/)
 - [Sofa King Cool](https://young-fortress-52703.herokuapp.com/)
-- [Weather Dashboard](https://djbartolini.github.io/weather-dashboard/)
+- [Tech About It](https://tech-about-it-blog.herokuapp.com/)
 
 ## Table of Contents
   * [Usage](#usage)
