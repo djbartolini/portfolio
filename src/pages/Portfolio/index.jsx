@@ -12,7 +12,7 @@ import resume from '/assets/resume.pdf';
 
 import photo from '/assets/dan-picture.jpg';
 import quizzical from '/assets/quizzical-demo.gif';
-import weather from '/assets/weather-dashboard.png';
+import techaboutit from '/assets/tech-about-it-demo.gif'
 import sofaKing from '/assets/sofa-king.png';
 import github from '/assets/github.png';
 import linkedin from '/assets/linkedin.png';
@@ -40,9 +40,10 @@ import heroku from '/assets/heroku.png';
 import bash from '/assets/bash.png';
 import sequelize from '/assets/sequelize.png';
 import mongoose from '/assets/mongoose.png';
-import vite from '/assets/vite.png';
 import stackOverflow from '/assets/stack-overflow.png';
-
+import python from '/assets/python.png';
+import typescript from '/assets/typescript.png'
+import flask from '/assets/flask.png'
 
 
 
@@ -66,21 +67,21 @@ const Portfolio = () => {
 
     if (img === 'earth') {
       setSkillList('Front End:');
-      setSkills([[js, 'JavaScript'], [html5, 'HTML5'], [css3, 'CSS3'], [react, 'React'], [bootstrap, 'Bootstrap'], [gimp, 'GIMP'], [figma, 'Figma']]);
+      setSkills([, [html5, 'HTML5'], [css3, 'CSS3'], [react, 'React'], [bootstrap, 'Bootstrap'], [gimp, 'GIMP'], [figma, 'Figma']]);
       target.setAttribute('id', 'style-active-icon');
       sun.removeAttribute('id');
       moon.removeAttribute('id');
     }
     if (img === 'sun') {
       setSkillList('Back End:');
-      setSkills([[node, 'Node.js'], [express, 'Express.js'], [mysql, 'MySQL'], [mongodb, 'MongoDB'], [graphql, 'GraphQL'], [api, 'REST API']]);
+      setSkills([[node, 'Node.js'], [express, 'Express.js'], [flask, 'Flask'], [mysql, 'MySQL'], [mongodb, 'MongoDB'], [graphql, 'GraphQL'], [api, 'REST API']]);
       target.setAttribute('id', 'style-active-icon');
       earth.removeAttribute('id');
       moon.removeAttribute('id');
     }
     if (img === 'moon') {
       setSkillList('Tools:');
-      setSkills([[vscode, 'VSCode'], [githubSkill, 'GitHub'], [heroku, 'Heroku'], [bash, 'Bash'], [vite, 'Vite'], [sequelize, 'Sequelize'], [mongoose, 'Mongoose'], [stackOverflow, 'Stack Overflow']]);
+      setSkills([[js, 'JavaScript'], [typescript, 'TypeScript'], [python, 'Python'], [githubSkill, 'GitHub'], [heroku, 'Heroku'], [bash, 'Bash'], [sequelize, 'Sequelize'], [mongoose, 'Mongoose'], [stackOverflow, 'Stack Overflow']]);
       target.setAttribute('id', 'style-active-icon');
       earth.removeAttribute('id');
       sun.removeAttribute('id');
@@ -218,23 +219,23 @@ const Portfolio = () => {
             <div className="style-weather-div">
               <Animator animation={MoveIn(500, 0)}>
                 <div className="style-small-div">
-                  <h4>Weather Dashboard</h4>
+                  <h4>Tech About It</h4>
                   <span>
-                    <a className="style-project-link" href="https://github.com/djbartolini/weather-dashboard" target="_blank">
+                    <a className="style-project-link" href="https://github.com/djbartolini/tech-about-it" target="_blank">
                       <i className="fa-solid fa-code"></i>
                       Code
                     </a>
-                    <a className="style-project-link" href="https://djbartolini.github.io/weather-dashboard/" target="_blank">
+                    <a className="style-project-link" href="https://tech-about-it-blog.herokuapp.com/" target="_blank">
                       <i className="fa-sharp fa-solid fa-eye"></i>
                       App
                     </a>
                   </span>
                 </div>
-                <a href="https://djbartolini.github.io/weather-dashboard/" target="_blank">
-                  <img className="style-project" src={weather} alt="screenshot of Weather Dashboard app" />
+                <a href="https://tech-about-it-blog.herokuapp.com/" target="_blank">
+                  <img className="style-project" src={techaboutit} alt="demo video of the tech about it app" />
                 </a>
-                <p className="style-project-text">A simple weather app that leverages API calls to OpenWeather to provide a forecast for any city.</p>
-                <p className="style-project-text"><em>Technologies: </em>Bootstrap, OpenWeather API, GeoCacher API</p>
+                <p className="style-project-text">A blog website where I share my thoughts and knowledge on all things tech.</p>
+                <p className="style-project-text"><em>Technologies: </em>React, Flask, Flask-CORS, SQLAlchemy ORM, Cloudinary</p>
               </Animator>
             </div>
           </div>
