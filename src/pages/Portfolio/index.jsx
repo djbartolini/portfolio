@@ -12,7 +12,7 @@ import resume from '/assets/resume.pdf';
 
 import photo from '/assets/dan-picture.jpg';
 import quizzical from '/assets/quizzical-demo.gif';
-import techaboutit from '/assets/tech-about-it-demo.gif'
+import techaboutit from '/assets/tech-demo.gif'
 import sofaKing from '/assets/sofa-king.png';
 import github from '/assets/github.png';
 import linkedin from '/assets/linkedin.png';
@@ -194,7 +194,30 @@ const Portfolio = () => {
         <ScrollPage>
           <div className="style-small-projects">
             <div>
-              <Animator animation={MoveIn(-500, 0)}>
+            <Animator animation={MoveIn(-500, 0)}>
+                <div className="style-small-div">
+                  <h4>Tech About It</h4>
+                  <span>
+                    <a className="style-project-link" href="https://github.com/djbartolini/tech-about-it" target="_blank">
+                      <i className="fa-solid fa-code"></i>
+                      Code
+                    </a>
+                    <a className="style-project-link" href="https://tech-about-it-blog.herokuapp.com/" target="_blank">
+                      <i className="fa-sharp fa-solid fa-eye"></i>
+                      App
+                    </a>
+                  </span>
+                </div>
+                <a href="https://tech-about-it-blog.herokuapp.com/" target="_blank">
+                  <img className="style-project" src={techaboutit} alt="demo video of the tech about it app" />
+                </a>
+                <p className="style-project-text">A blog website where I share my thoughts and knowledge on all things tech.</p>
+                <p className="style-project-text"><em>Collaborators: </em>Solo project</p>
+                <p className="style-project-text"><em>Technologies: </em>React, Flask, Flask-CORS, SQLAlchemy ORM, Cloudinary</p>
+              </Animator>
+            </div>
+            <div className="style-weather-div">
+            <Animator animation={MoveIn(500, 0)}>
                 <div className="style-small-div">
                   <h4>Sofa Kings</h4>
                   <span>
@@ -214,28 +237,6 @@ const Portfolio = () => {
                 <p className="style-project-text">A RESTful furniture showcasing app that uses Cloudinary to upload custom furniture.</p>
                 <p className="style-project-text"><em>Collaborators: </em>Adam Queen, Kass Rojas, Sai Monta</p>
                 <p className="style-project-text"><em>Technologies: </em>Handlebars, Sequelize ORM, Node.js, Express.js, Cloudinary, Bcrypt</p>
-              </Animator>
-            </div>
-            <div className="style-weather-div">
-              <Animator animation={MoveIn(500, 0)}>
-                <div className="style-small-div">
-                  <h4>Tech About It</h4>
-                  <span>
-                    <a className="style-project-link" href="https://github.com/djbartolini/tech-about-it" target="_blank">
-                      <i className="fa-solid fa-code"></i>
-                      Code
-                    </a>
-                    <a className="style-project-link" href="https://tech-about-it-blog.herokuapp.com/" target="_blank">
-                      <i className="fa-sharp fa-solid fa-eye"></i>
-                      App
-                    </a>
-                  </span>
-                </div>
-                <a href="https://tech-about-it-blog.herokuapp.com/" target="_blank">
-                  <img className="style-project" src={techaboutit} alt="demo video of the tech about it app" />
-                </a>
-                <p className="style-project-text">A blog website where I share my thoughts and knowledge on all things tech.</p>
-                <p className="style-project-text"><em>Technologies: </em>React, Flask, Flask-CORS, SQLAlchemy ORM, Cloudinary</p>
               </Animator>
             </div>
           </div>
