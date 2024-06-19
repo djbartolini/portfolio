@@ -1,0 +1,14 @@
+#root {
+  text-align: center;
+  color: white;
+}
+
+
+body {
+  overflow-x: hidden;
+  background-image: url('../assets/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-size: cover;
+  height: 100svh;
+}
